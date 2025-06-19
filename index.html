@@ -2,31 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="Ben Stanley" />
-    <link rel="icon" href="images/avatar.png" />
-    <title>Ben Stanley · Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- Updated Font Awesome URL -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap"
-    />
+    <script>
+      fetch("head.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.head.innerHTML += data;
+        });
+    </script>
   </head>
+
   <body class="center-content">
     <!-- Custom NAV BAR CONTENT SECTION -->
     <div id="navbar-placeholder"></div>
@@ -68,8 +52,27 @@
 
 <script>
   fetch("navbar.html")
-    .then((response) => response.text())
+    .then((res) => res.text())
     .then((data) => {
       document.getElementById("navbar-placeholder").innerHTML = data;
+      initNavbarBehavior(); // Call function from navbar-behavior.js
     });
+</script>
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector(".custom-navbar");
+
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.classList.add("nav-hidden");
+    } else {
+      // Scrolling up
+      navbar.classList.remove("nav-hidden");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
+  });
 </script>
