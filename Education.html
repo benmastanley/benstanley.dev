@@ -29,19 +29,7 @@
 
   <body>
     <!--NAV BAR CONTENT SECTION-->
-    <div class="custom-navbar">
-      <div class="brand">
-        <a href="index.html"
-          ><i class="fas fa-home"></i><span class="sr-only">(current)</span></a
-        >
-      </div>
-      <div class="nav-links">
-        <a href="Education.html">Education</a>
-        <a href="Projects.html">Projects</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Contact.html">Contact</a>
-      </div>
-    </div>
+    <div id="navbar-placeholder"></div>
 
     <div class="content-wrapper">
       <!--MAIN CONTENT SECTION-->
@@ -512,15 +500,12 @@
         });
       }
     </script>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	-->
-    <!-- https://www.w3schools.com/howto/tryit.asp?filename=Hello%20World -->
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

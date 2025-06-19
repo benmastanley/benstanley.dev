@@ -29,62 +29,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap"
     />
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        background-color: #f8f9fa;
-      }
-      .navbar {
-        background-color: #343a40;
-      }
-      .navbar-brand,
-      .navbar-nav .nav-link {
-        color: #ffffff;
-      }
-      .navbar-brand:hover,
-      .navbar-nav .nav-link:hover {
-        color: #f8f9fa;
-      }
-      .navbar-toggler-icon {
-        background-color: #ffffff;
-      }
-      main {
-        padding: 40px 0;
-      }
-      .social-links {
-        text-align: center;
-      }
-      .social-links i {
-        font-size: 2rem; /* Adjust size as needed */
-        color: #333; /* Adjust color as needed */
-        margin-right: 15px;
-      }
-      .social-links a {
-        color: #333;
-        text-decoration: none;
-        font-family: "Poppins", sans-serif;
-      }
-      .social-links a:hover {
-        color: #007bff;
-        text-decoration: underline;
-      }
-    </style>
   </head>
   <body class="center-content">
     <!-- NAV BAR CONTENT SECTION -->
-    <div class="custom-navbar">
-      <div class="brand">
-        <a href="index.html"
-          ><i class="fas fa-home"></i><span class="sr-only">(current)</span></a
-        >
-      </div>
-      <div class="nav-links">
-        <a href="Education.html">Education</a>
-        <a href="Projects.html">Projects</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Contact.html">Contact</a>
-      </div>
-    </div>
+    <div id="navbar-placeholder"></div>
 
     <!-- MAIN CONTENT SECTION -->
     <main>
@@ -132,5 +80,12 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

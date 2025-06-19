@@ -34,19 +34,7 @@
 
   <body class="center-content">
     <!--NAV BAR CONTENT SECTION-->
-    <div class="custom-navbar">
-      <div class="brand">
-        <a href="index.html"
-          ><i class="fas fa-home"></i><span class="sr-only">(current)</span></a
-        >
-      </div>
-      <div class="nav-links">
-        <a href="Education.html">Education</a>
-        <a href="Projects.html">Projects</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Contact.html">Contact</a>
-      </div>
-    </div>
+    <div id="navbar-placeholder"></div>
 
     <!--MAIN CONTENT SECTION-->
     <main>
@@ -82,3 +70,10 @@
     ></script>
   </body>
 </html>
+<script>
+  fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>

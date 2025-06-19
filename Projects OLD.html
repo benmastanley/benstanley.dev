@@ -29,7 +29,19 @@
 
   <body>
     <!--NAV BAR CONTENT SECTION-->
-    <div id="navbar-placeholder"></div>
+    <div class="custom-navbar">
+      <div class="brand">
+        <a href="index.html"
+          ><i class="fas fa-home"></i><span class="sr-only">(current)</span></a
+        >
+      </div>
+      <div class="nav-links">
+        <a href="Education.html">Education</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Resume.html">Resume</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+    </div>
 
     <!--MAIN CONTENT SECTION-->
     <div class="content-wrapper">
@@ -42,7 +54,7 @@
             <div class="col" style="text-align: center"><h2>Projects</h2></div>
           </div>
           <div class="row" style="margin-top: 10px; margin-bottom: 10px">
-            <div class="col-md-6" style="text-align: center">
+            <div class="col-md-5" style="text-align: center">
               <h5>Own Projects</h5>
               <h6>
                 Projects that were completed in own time or similar to further
@@ -52,73 +64,6 @@
               <hr class="line" />
               <div class="row">
                 <div class="col-md-12">
-                  <div class="card">
-                    <img
-                      class="card-img-top"
-                      src="Images/gamestore.png"
-                      alt="Game Store App"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Game Store Application</h5>
-                      <h6>2025</h6>
-                      <p class="card-text">
-                        A simple yet functional Game Store application designed
-                        to manage a collection of games and categories. The
-                        frontend is built using Blazor and communicates with a
-                        .NET 9 Web API. Data is stored in an MSSQL database and
-                        accessed via Entity Framework. The application is hosted
-                        on my private VPS, served over HTTPS with a Let's
-                        Encrypt SSL certificate, and is accessible via a custom
-                        subdomain I registered. While this is a relatively
-                        straightforward project, it effectively demonstrates my
-                        ability to integrate frontend, backend, and database
-                        layers, as well as manage deployment and hosting
-                        independently.
-                      </p>
-                      <a
-                        href="https://gamestore.benstanley.dev/"
-                        class="btn btn-secondary"
-                        target="blank"
-                        >View</a
-                      >
-                      <a
-                        href="https://github.com/benmastanley/GameStore"
-                        class="btn btn-secondary"
-                        target="blank"
-                        >Code</a
-                      >
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img
-                      class="card-img-top"
-                      src="Images/website.svg"
-                      alt="Personal Portfolio"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Personal Portfolio</h5>
-                      <p class="card-text">
-                        This is the site you're currently viewing—my personal
-                        portfolio, built from the ground up using HTML, CSS,
-                        Bootstrap, and a touch of JavaScript. It was designed to
-                        be clean, responsive, and easy to navigate, showcasing
-                        my work and background in a straightforward way. The
-                        site is hosted on my private VPS and secured with an SSL
-                        certificate via LetsEncrypt. It's accessible through a
-                        custom domain I registered and configured myself. While
-                        simple in tech stack, this project demonstrates my
-                        attention to detail, design sense, and ability to
-                        independently manage both frontend development and full
-                        deployment.
-                      </p>
-                      <a
-                        href="https://github.com/benmastanley/benstanley.dev"
-                        class="btn btn-secondary"
-                        target="blank"
-                        >Code</a
-                      >
-                    </div>
-                  </div>
                   <div class="card">
                     <img
                       class="card-img-top"
@@ -132,8 +77,8 @@
                         A simple WPF Calculator Application created using
                         Windows Presentation Foundation, XAML (eXtensible
                         Application Markup Language), C#, and Visual Studio
-                        2019. This application has not been deployed but the
-                        source code can be seen in github below.
+                        2019. Future Improvements for this application pending
+                        soon.
                       </p>
                       <a
                         href="https://github.com/benmastanley/Wpf-Calculator-App"
@@ -159,7 +104,7 @@
               </ul>
             </div>
 
-            <div class="col-md-6" style="text-align: center">
+            <div class="col-md-7" style="text-align: center">
               <h5>University Projects</h5>
               <h6>
                 Projects completed throughout my time at the University of Hull
@@ -168,8 +113,8 @@
               </h6>
               <hr class="line" />
               <div class="row">
-                <div class="col-md-12 mt-2">
-                  <div class="card flex-fill">
+                <div class="col-md-12">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/finance.jpg"
@@ -205,8 +150,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/engineering.png"
@@ -221,8 +166,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/Distributed.png"
@@ -234,8 +179,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/data mining.png"
@@ -249,8 +194,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img class="card-img-top" src="Images/mobile.png" alt="" />
                     <div class="card-body">
                       <div class="card-title">
@@ -260,8 +205,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img class="card-img-top" src="Images/agile.png" alt="" />
                     <div class="card-body">
                       <div class="card-title">Agile</div>
@@ -269,8 +214,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/networking.svg"
@@ -284,8 +229,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/database.png"
@@ -297,8 +242,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/ecommerce.png"
@@ -310,8 +255,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/software eng.png"
@@ -323,8 +268,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/systems analysis.png"
@@ -336,8 +281,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/scissors.jpg"
@@ -349,8 +294,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mt-2">
-                  <div class="card h-100">
+                <div class="col-md-6">
+                  <div class="card">
                     <img
                       class="card-img-top"
                       src="Images/battleships.png"
@@ -404,11 +349,3 @@
     ></script>
   </body>
 </html>
-
-<script>
-  fetch("navbar.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-</script>
